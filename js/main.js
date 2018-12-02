@@ -112,6 +112,7 @@ function update() {
     });
 }
 
+/** Checks if the current position of snake will cause game over */
 function checkGameOver() {
     currentY = snake_positions[0]['y'];
     currentX = snake_positions[0]['x'];
@@ -122,6 +123,7 @@ function checkGameOver() {
         init();
 }
 
+/** Seeds apple in random position in game */
 function seedApple() {
     var random_x = Math.floor(Math.random() * game_size);
     var random_y = Math.floor(Math.random() * game_size);
