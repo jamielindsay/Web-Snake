@@ -60,6 +60,7 @@ function draw() {
 
 /** Game logic */
 function update() {
+    /* Handle snake movement and game logic */
     var new_position = {'y': snake_positions[0]['y'], 'x': snake_positions[0]['x']};
     if ((Date.now() - itime) / 1000 >= 1/speed) {
         switch (current_direction) {
@@ -90,6 +91,7 @@ function update() {
         itime = Date.now();
     }
     
+    /* Handle user input */ 
     document.addEventListener('keydown', function() {
         if (!keypressed) {
             if (event.keyCode == 65 && current_direction != 'R') // LEFT
