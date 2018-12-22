@@ -10,17 +10,17 @@
 
 </head>
 <body onload="mainLoop();">
-  <div id="container">
-    <h1>Snake Web</h1>
-    <div id="content">
-      <div class="column-width-auto">
+  <div id="container" class="grid-container">
+    <h1 class="grid-item">Snake Web</h1>
+    <div id="content" class="grid-item">
+      <div class="flex-side-item">
         <h3>Instructions: </h3>
         <h4>Use WASD to move up, left, down, and right.</h4>
       </div>
-      <div class="column-width-auto">
+      <div class="flex-main-item">
         <canvas id="multiplier" width="600" height="600"></canvas>
       </div>
-      <div class="column-width-auto">
+      <div class="flex-side-item">
           <h3>Score: </h3>
           <h3 id="scorelabel">1</h3>
       </div>

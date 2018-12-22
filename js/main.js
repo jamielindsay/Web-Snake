@@ -45,9 +45,12 @@ function draw() {
         for (var x = 0; x < canvas.scrollWidth; x += cell_width) {
             ctx.beginPath();
             ctx.rect(x, y, cell_width, cell_height);
-            if (snake_positions.find(snake => JSON.stringify(snake) === JSON.stringify({'y': y / cell_height, 'x': x / cell_width})) || JSON.stringify(apple_position) === JSON.stringify({'y': y / cell_height, 'x': x / cell_width})) {
+            if (snake_positions.find(snake => JSON.stringify(snake) === JSON.stringify({'y': y / cell_height, 'x': x / cell_width}))) {
                 ctx.fillStyle = "#ffffff";
-            } 
+            }
+            else if (JSON.stringify(apple_position) === JSON.stringify({'y': y / cell_height, 'x': x / cell_width})) {
+                ctx.fillStyle = "#26a69a";
+            }
             else {
                 ctx.fillStyle = "#424242";
             }
