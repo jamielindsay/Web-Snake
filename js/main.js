@@ -115,15 +115,20 @@ function update() {
     });
 }
 
+function saveAndExit() {
+    localStorage.setItem('score', score);
+    window.location.href = "gameover.html";
+}
+
 /** Checks if the current position of snake will cause game over */
 function checkGameOver() {
     currentY = snake_positions[0]['y'];
     currentX = snake_positions[0]['x'];
     if (currentY > game_size-1 || currentY < 0 || currentX > game_size-1 || currentX < 0)
-        init();
+        saveAndExit();
     var duplicates = snake_positions.filter(i => JSON.stringify(i) === JSON.stringify(snake_positions[0]));
     if (duplicates.length > 1)
-        init();
+        saveAndExit();
 }
 
 /** Seeds apple in random position in game */

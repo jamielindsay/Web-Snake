@@ -1,0 +1,1 @@
+document.getElementById("final-score").innerHTML = "Score: " + localStorage.getItem('score');
