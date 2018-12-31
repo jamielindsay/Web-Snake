@@ -48,3 +48,75 @@ body {
     background-color: #424242;
     border: 3px solid #26a69a;
   }
+
+#landing-banner {
+  background-color: #212121;
+  background-size: cover;
+}
+
+#landing-content {
+  margin: auto;
+  width: 50%;
+  display: grid;
+  grid-auto-columns: 1fr;
+}
+
+#title-en {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  background-color:  #26a69a;
+  font-size: 3rem;
+  transition: all 0.7s ease;
+}
+
+#title-en:hover {
+  background-color: #ffffff;
+}
+
+#desc-en {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  background-color:  #2196f3;
+}
+
+#desc-en p {
+  color: black;
+  text-shadow: 1px 1px 1px white;
+  margin: 5%;
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+#desc-cn {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  background-color:  #f44336;
+}
+
+#desc-cn p {
+  color: black;
+  text-shadow: 1px 1px 1px white;
+  margin: 5%;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+#title-cn {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  background-color: #26a69a;
+  font-size: 3rem;
+  transition: all 0.7s ease;
+}
+
+#title-cn:hover {
+  background-color: #ffffff;
+}
